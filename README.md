@@ -1,1 +1,1 @@
-# l10n_my
+Malaysia Chart of Account for general use
