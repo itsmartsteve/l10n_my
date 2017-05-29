@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+
+    <!-- Sales Tax -->
+
+    <record id="my_output_tax_zrl" model="account.tax.template">
+        <field name="name">ZRL - Local Zero Rated Supplies (0%)</field>
+        <field name="description">ZRL</field>
+        <field name="price_include" eval="0"/>
+        <field name="amount">0.0</field>
+        <field name="type">percent</field>
+        <field name="type_tax_use">sale</field>
+        <field name="ref_base_sign">-1</field>
+        <field name="ref_tax_sign">-1</field>
+        <field name="account_collected_id" ref="account_account_200202"/>
+        <field name="account_paid_id" ref="account_account_200202"/>
+        <field name="base_code_id" ref="my_base_code_zrlb"/>
+        <field name="tax_code_id" ref="my_tax_code_zrl"/>
+        <field name="ref_base_code_id" ref="my_base_code_zrlb"/>
+        <field name="ref_tax_code_id" ref="my_tax_code_zrl"/>
+        <field name="child_depend" eval="0"/>
+        <field name="chart_template_id" ref="my_chart_template"/>
+    </record>
+
+    <record id="my_output_tax_zre" model="account.tax.template">
+        <field name="name">ZRE - Export Zero Rated Supplies (0%)</field>
+        <field name="description">ZRE</field>
+        <field name="price_include" eval="0"/>
+        <field name="amount">0.0</field>
+        <field name="type">percent</field>
+        <field name="type_tax_use">sale</field>
+        <field name="ref_base_sign">-1</field>
+        <field name="ref_tax_sign">-1</field>
+        <field name="account_collected_id" ref="account_account_200203"/>
+        <field name="account_paid_id" ref="account_account_200203"/>
+        <field name="base_code_id" ref="my_base_code_zreb"/>
+        <field name="tax_code_id" ref="my_tax_code_zre"/>
+        <field name="ref_base_code_id" ref="my_base_code_zreb"/>
+        <field name="ref_tax_code_id" ref="my_tax_code_zre"/>
+        <field name="child_depend" eval="0"/>
+        <field name="chart_template_id" ref="my_chart_template"/>
+    </record>
+
+    <record id="my_output_tax_es43" model="account.tax.template">
+        <field name="name">ES43 - Incidental Exempt Supplies (0%)</field>
+        <field name="description">ES43</field>
+        <field name="price_include" eval="0"/>
+        <field name="amount">0.0</field>
+        <field name="type">percent</field>
+        <field name="type_tax_use">sale</field>
+        <field name="ref_base_sign">-1</field>
+        <field name="ref_tax_sign">-1</field>
+        <field name="account_collected_id" ref="account_account_200204"/>
+        <field name="account_paid_id" ref="account_account_200204"/>
+        <field name="base_code_id" ref="my_base_code_es43b"/>
+        <field name="tax_code_id" ref="my_tax_code_es43"/>
+        <field name="ref_base_code_id" ref="my_base_code_es43b"/>
+        <field name="ref_tax_code_id" ref="my_tax_code_es43"/>
+        <field name="child_depend" eval="0"/>
+        <field name="chart_template_id" ref="my_chart_template"/>
+    </record>
+
+    <record id="my_output_tax_ds" model="account.tax.template">
+        <field name="name">DS - Deemed Supplies output tax (6%)</field>
+        <field name="description">DS</field>
+        <field name="price_include" eval="0"/>
+        <field name="amount">0.06</field>
+        <field name="type">percent</field>
+        <field name="type_tax_use">sale</field>
+        <field name="ref_base_sign">-1</field>
+        <field name="ref_tax_sign">-1</field>
+        <field name="account_collected_id" ref="account_account_200205"/>
+        <field name="account_paid_id" ref="account_account_200205"/>
+        <field name="base_code_id" ref="my_base_code_dsb"/>
+        <field name="tax_code_id" ref="my_tax_code_ds"/>
+        <field name="ref_base_code_id" ref="my_base_code_dsb"/>
+        <field name="ref_tax_code_id" ref="my_tax_code_ds"/>
+        <field name="child_depend" eval="0"/>
+        <field name="chart_template_id" ref="my_chart_template"/>
+    </record>
+
+    <record id="my_output_tax_os" model="account.tax.template">
+        <field name="name">OS - Out of Scope Supplies (0%)</field>
+        <field name="description">OS</field>
+        <field name="price_include" eval="0"/>
+        <field name="amount">0.0</field>
+        <field name="type">percent</field>
+        <field name="type_tax_use">sale</field>
+        <field name="ref_base_sign">-1</field>
+        <field name="ref_tax_sign">-1</field>
+        <field name="account_collected_id" ref="account_account_200206"/>
+        <field name="account_paid_id" ref="account_account_200206"/>
+        <field name="base_code_id" ref="my_base_code_osb"/>
+        <field name="tax_code_id" ref="my_tax_code_os"/>
+        <field name="ref_base_code_id" ref="my_base_code_osb"/>
+        <field name="ref_tax_code_id" ref="my_tax_code_os"/>
+        <field name="child_depend" eval="0"/>
+        <field name="chart_template_id" ref="my_chart_template"/>
+    </record>
+
+	<record id="my_output_tax_es" model="account.tax.template">
+        <field name="name">ES - Exempt Supplies (0%)</field>
+        <field name="description">ES</field>
+        <field name="price_include" eval="0"/>
+        <field name="amount">0.0</field>
+        <field name="type">percent</field>
+        <field name="type_tax_use">sale</field>
+        <field name="ref_base_sign">-1</field>
+        <field name="ref_tax_sign">-1</field>
+        <field name="account_collected_id" ref="account_account_200207"/>
+        <field name="account_paid_id" ref="account_account_200207"/>
+        <field name="base_code_id" ref="my_base_code_esb"/>
+        <field name="tax_code_id" ref="my_tax_code_es"/>
+        <field name="ref_base_code_id" ref="my_base_code_esb"/>
+        <field name="ref_tax_code_id" ref="my_tax_code_es"/>
+        <field name="child_depend" eval="0"/>
+        <field name="chart_template_id" ref="my_chart_template"/>
+    </record>
+	
+	<record id="my_output_tax_rs" model="account.tax.template">
+        <field name="name">RS - GST Order Relief Supplies (0%)</field>
+        <field name="description">RS</field>
+        <field name="price_include" eval="0"/>
+        <field name="amount">0.0</field>
+        <field name="type">percent</field>
+        <field name="type_tax_use">sale</field>
+        <field name="ref_base_sign">-1</field>
+        <field name="ref_tax_sign">-1</field>
+        <field name="account_collected_id" ref="account_account_200208"/>
+        <field name="account_paid_id" ref="account_account_200208"/>
+        <field name="base_code_id" ref="my_base_code_rsb"/>
+        <field name="tax_code_id" ref="my_tax_code_rs"/>
+        <field name="ref_base_code_id" ref="my_base_code_rsb"/>
+        <field name="ref_tax_code_id" ref="my_tax_code_rs"/>
+        <field name="child_depend" eval="0"/>
+        <field name="chart_template_id" ref="my_chart_template"/>
+    </record>
+	
+	<record id="my_output_tax_gs" model="account.tax.template">
+        <field name="name">GS - Group Registration Supplies (0%)</field>
+        <field name="description">GS</field>
+        <field name="price_include" eval="0"/>
+        <field name="amount">0.0</field>
+        <field name="type">percent</field>
+        <field name="type_tax_use">sale</field>
+        <field name="ref_base_sign">-1</field>
+        <field name="ref_tax_sign">-1</field>
+        <field name="account_collected_id" ref="account_account_200209"/>
+        <field name="account_paid_id" ref="account_account_200209"/>
+        <field name="base_code_id" ref="my_base_code_gsb"/>
+        <field name="tax_code_id" ref="my_tax_code_gs"/>
+        <field name="ref_base_code_id" ref="my_base_code_gsb"/>
+        <field name="ref_tax_code_id" ref="my_tax_code_gs"/>
+        <field name="child_depend" eval="0"/>
+        <field name="chart_template_id" ref="my_chart_template"/>
+    </record>
+	
+	<record id="my_output_tax_ajs" model="account.tax.template">
+        <field name="name">AJS - Output Tax: Bad debt and Other Adjustment (6%)</field>
+        <field name="description">AJS</field>
+        <field name="price_include" eval="0"/>
+        <field name="amount">0.0</field>
+        <field name="type">percent</field>
+        <field name="type_tax_use">sale</field>
+        <field name="ref_base_sign">-1</field>
+        <field name="ref_tax_sign">-1</field>
+        <field name="account_collected_id" ref="account_account_200210"/>
+        <field name="account_paid_id" ref="account_account_200210"/>
+        <field name="base_code_id" ref="my_base_code_ajsb"/>
+        <field name="tax_code_id" ref="my_tax_code_ajs"/>
+        <field name="ref_base_code_id" ref="my_base_code_ajsb"/>
+        <field name="ref_tax_code_id" ref="my_tax_code_ajs"/>
+        <field name="child_depend" eval="0"/>
+        <field name="chart_template_id" ref="my_chart_template"/>
+    </record>
+	
+	<record id="my_output_tax_zda" model="account.tax.template">
+        <field name="name">ZDA - Zero Rate to Designated Area (0%)</field>
+        <field name="description">ZDA</field>
+        <field name="price_include" eval="0"/>
+        <field name="amount">0.0</field>
+        <field name="type">percent</field>
+        <field name="type_tax_use">sale</field>
+        <field name="ref_base_sign">-1</field>
+        <field name="ref_tax_sign">-1</field>
+        <field name="account_collected_id" ref="account_account_200211"/>
+        <field name="account_paid_id" ref="account_account_200211"/>
+        <field name="base_code_id" ref="my_base_code_zdab"/>
+        <field name="tax_code_id" ref="my_tax_code_zda"/>
+        <field name="ref_base_code_id" ref="my_base_code_zdab"/>
+        <field name="ref_tax_code_id" ref="my_tax_code_zda"/>
+        <field name="child_depend" eval="0"/>
+        <field name="chart_template_id" ref="my_chart_template"/>
+    </record>
+	
+	<record id="my_output_tax_sr" model="account.tax.template">
+        <field name="name">SR - Standard Rated Supplies (6%)</field>
+        <field name="description">SR</field>
+        <field name="price_include" eval="0"/>
+        <field name="amount">0.06</field>
+        <field name="type">percent</field>
+        <field name="type_tax_use">sale</field>
+        <field name="ref_base_sign">-1</field>
+        <field name="ref_tax_sign">-1</field>
+        <field name="account_collected_id" ref="account_account_200201"/>
+        <field name="account_paid_id" ref="account_account_200201"/>
+        <field name="base_code_id" ref="my_base_code_srb"/>
+        <field name="tax_code_id" ref="my_tax_code_sr"/>
+        <field name="ref_base_code_id" ref="my_base_code_srb"/>
+        <field name="ref_tax_code_id" ref="my_tax_code_sr"/>
+        <field name="child_depend" eval="0"/>
+        <field name="chart_template_id" ref="my_chart_template"/>
+    </record>
+
+
+    <!-- Purchases Tax -->
+	
+	<record id="my_input_tax_im" model="account.tax.template">
+        <field name="name">IM - Imported Goods (6%)</field>
+        <field name="description">IM</field>
+        <field name="price_include" eval="0"/>
+        <field name="amount">0.06</field>
+        <field name="type">percent</field>
+        <field name="type_tax_use">purchase</field>
+        <field name="ref_base_sign">-1</field>
+        <field name="ref_tax_sign">-1</field>
+        <field name="account_collected_id" ref="account_account_103002"/>
+        <field name="account_paid_id" ref="account_account_103002"/>
+        <field name="base_code_id" ref="my_base_code_imb"/>
+        <field name="tax_code_id" ref="my_tax_code_im"/>
+        <field name="ref_base_code_id" ref="my_base_code_imb"/>
+        <field name="ref_tax_code_id" ref="my_tax_code_im"/>
+        <field name="child_depend" eval="0"/>
+        <field name="chart_template_id" ref="my_chart_template"/>
+    </record>
+	
+	<record id="my_input_tax_is" model="account.tax.template">
+        <field name="name">IS - Special GST Scheme imported goods (0%)</field>
+        <field name="description">IS</field>
+        <field name="price_include" eval="0"/>
+        <field name="amount">0.0</field>
+        <field name="type">percent</field>
+        <field name="type_tax_use">purchase</field>
+        <field name="ref_base_sign">-1</field>
+        <field name="ref_tax_sign">-1</field>
+        <field name="account_collected_id" ref="account_account_103003"/>
+        <field name="account_paid_id" ref="account_account_103003"/>
+        <field name="base_code_id" ref="my_base_code_isb"/>
+        <field name="tax_code_id" ref="my_tax_code_is"/>
+        <field name="ref_base_code_id" ref="my_base_code_isb"/>
+        <field name="ref_tax_code_id" ref="my_tax_code_is"/>
+        <field name="child_depend" eval="0"/>
+        <field name="chart_template_id" ref="my_chart_template"/>
+    </record>
+	
+	<record id="my_input_tax_bl" model="account.tax.template">
+        <field name="name">BL - Blocked Input Tax (6%)</field>
+        <field name="description">BL</field>
+        <field name="price_include" eval="0"/>
+        <field name="amount">0.06</field>
+        <field name="type">percent</field>
+        <field name="type_tax_use">purchase</field>
+        <field name="ref_base_sign">-1</field>
+        <field name="ref_tax_sign">-1</field>
+        <field name="account_collected_id" ref="account_account_103004"/>
+        <field name="account_paid_id" ref="account_account_103004"/>
+        <field name="base_code_id" ref="my_base_code_blb"/>
+        <field name="tax_code_id" ref="my_tax_code_bl"/>
+        <field name="ref_base_code_id" ref="my_base_code_blb"/>
+        <field name="ref_tax_code_id" ref="my_tax_code_bl"/>
+        <field name="child_depend" eval="0"/>
+        <field name="chart_template_id" ref="my_chart_template"/>
+    </record>
+	
+	<record id="my_input_tax_nr" model="account.tax.template">
+        <field name="name">NR -Non-GST Registered Supplier Purchases (0%)</field>
+        <field name="description">NR</field>
+        <field name="price_include" eval="0"/>
+        <field name="amount">0.0</field>
+        <field name="type">percent</field>
+        <field name="type_tax_use">purchase</field>
+        <field name="ref_base_sign">-1</field>
+        <field name="ref_tax_sign">-1</field>
+        <field name="account_collected_id" ref="account_account_103005"/>
+        <field name="account_paid_id" ref="account_account_103005"/>
+        <field name="base_code_id" ref="my_base_code_nrb"/>
+        <field name="tax_code_id" ref="my_tax_code_nr"/>
+        <field name="ref_base_code_id" ref="my_base_code_nrb"/>
+        <field name="ref_tax_code_id" ref="my_tax_code_nr"/>
+        <field name="child_depend" eval="0"/>
+        <field name="chart_template_id" ref="my_chart_template"/>
+    </record>
+		
+	<record id="my_input_tax_zp" model="account.tax.template">
+        <field name="name">ZP - Zero Rated Purchases (0%)</field>
+        <field name="description">ZP</field>
+        <field name="price_include" eval="0"/>
+        <field name="amount">0.0</field>
+        <field name="type">percent</field>
+        <field name="type_tax_use">purchase</field>
+        <field name="ref_base_sign">-1</field>
+        <field name="ref_tax_sign">-1</field>
+        <field name="account_collected_id" ref="account_account_103006"/>
+        <field name="account_paid_id" ref="account_account_103006"/>
+        <field name="base_code_id" ref="my_base_code_zpb"/>
+        <field name="tax_code_id" ref="my_tax_code_zp"/>
+        <field name="ref_base_code_id" ref="my_base_code_zpb"/>
+        <field name="ref_tax_code_id" ref="my_tax_code_zp"/>
+        <field name="child_depend" eval="0"/>
+        <field name="chart_template_id" ref="my_chart_template"/>
+    </record>
+	
+	<record id="my_input_tax_ep" model="account.tax.template">
+        <field name="name">EP - Exempt Purchases (0%)</field>
+        <field name="description">EP</field>
+        <field name="price_include" eval="0"/>
+        <field name="amount">0.0</field>
+        <field name="type">percent</field>
+        <field name="type_tax_use">purchase</field>
+        <field name="ref_base_sign">-1</field>
+        <field name="ref_tax_sign">-1</field>
+        <field name="account_collected_id" ref="account_account_103007"/>
+        <field name="account_paid_id" ref="account_account_103007"/>
+        <field name="base_code_id" ref="my_base_code_epb"/>
+        <field name="tax_code_id" ref="my_tax_code_ep"/>
+        <field name="ref_base_code_id" ref="my_base_code_epb"/>
+        <field name="ref_tax_code_id" ref="my_tax_code_ep"/>
+        <field name="child_depend" eval="0"/>
+        <field name="chart_template_id" ref="my_chart_template"/>
+    </record>
+
+	
+	<record id="my_input_tax_op" model="account.tax.template">
+        <field name="name">OP - Out of Scope Purchases (0%)</field>
+        <field name="description">OP</field>
+        <field name="price_include" eval="0"/>
+        <field name="amount">0.0</field>
+        <field name="type">percent</field>
+        <field name="type_tax_use">purchase</field>
+        <field name="ref_base_sign">-1</field>
+        <field name="ref_tax_sign">-1</field>
+        <field name="account_collected_id" ref="account_account_103008"/>
+        <field name="account_paid_id" ref="account_account_103008"/>
+        <field name="base_code_id" ref="my_base_code_opb"/>
+        <field name="tax_code_id" ref="my_tax_code_op"/>
+        <field name="ref_base_code_id" ref="my_base_code_opb"/>
+        <field name="ref_tax_code_id" ref="my_tax_code_op"/>
+        <field name="child_depend" eval="0"/>
+        <field name="chart_template_id" ref="my_chart_template"/>
+    </record>
+	
+	<record id="my_input_tax_tx-e43" model="account.tax.template">
+        <field name="name">TX-E43 - Expenditure directly for Incidental Exempt Supplies (6%)</field>
+        <field name="description">TX-E43</field>
+        <field name="price_include" eval="0"/>
+        <field name="amount">0.06</field>
+        <field name="type">percent</field>
+        <field name="type_tax_use">purchase</field>
+        <field name="ref_base_sign">-1</field>
+        <field name="ref_tax_sign">-1</field>
+        <field name="account_collected_id" ref="account_account_103009"/>
+        <field name="account_paid_id" ref="account_account_103009"/>
+        <field name="base_code_id" ref="my_base_code_tx-e43b"/>
+        <field name="tax_code_id" ref="my_tax_code_tx-e43"/>
+        <field name="ref_base_code_id" ref="my_base_code_tx-e43b"/>
+        <field name="ref_tax_code_id" ref="my_tax_code_tx-e43"/>
+        <field name="child_depend" eval="0"/>
+        <field name="chart_template_id" ref="my_chart_template"/>
+    </record>
+	
+	<record id="my_input_tax_tx-n43" model="account.tax.template">
+        <field name="name">TX-N43 - Expenditure directly for Exempt Supplies (6%)</field>
+        <field name="description">TX-N43</field>
+        <field name="price_include" eval="0"/>
+        <field name="amount">0.06</field>
+        <field name="type">percent</field>
+        <field name="type_tax_use">purchase</field>
+        <field name="ref_base_sign">-1</field>
+        <field name="ref_tax_sign">-1</field>
+        <field name="account_collected_id" ref="account_account_103010"/>
+        <field name="account_paid_id" ref="account_account_103010"/>
+        <field name="base_code_id" ref="my_base_code_tx-n43b"/>
+        <field name="tax_code_id" ref="my_tax_code_tx-n43"/>
+        <field name="ref_base_code_id" ref="my_base_code_tx-n43b"/>
+        <field name="ref_tax_code_id" ref="my_tax_code_tx-n43"/>
+        <field name="child_depend" eval="0"/>
+        <field name="chart_template_id" ref="my_chart_template"/>
+    </record>
+	
+	<record id="my_input_tax_tx-re" model="account.tax.template">
+        <field name="name">TX-RE - Residual input tax expenditure (6%)</field>
+        <field name="description">TX-RE</field>
+        <field name="price_include" eval="0"/>
+        <field name="amount">0.06</field>
+        <field name="type">percent</field>
+        <field name="type_tax_use">purchase</field>
+        <field name="ref_base_sign">-1</field>
+        <field name="ref_tax_sign">-1</field>
+        <field name="account_collected_id" ref="account_account_103011"/>
+        <field name="account_paid_id" ref="account_account_103011"/>
+        <field name="base_code_id" ref="my_base_code_tx-reb"/>
+        <field name="tax_code_id" ref="my_tax_code_tx-re"/>
+        <field name="ref_base_code_id" ref="my_base_code_tx-reb"/>
+        <field name="ref_tax_code_id" ref="my_tax_code_tx-re"/>
+        <field name="child_depend" eval="0"/>
+        <field name="chart_template_id" ref="my_chart_template"/>
+    </record>
+	
+	<record id="my_input_tax_gp" model="account.tax.template">
+        <field name="name">GP - Group Registration Purchases (0%)</field>
+        <field name="description">GP</field>
+        <field name="price_include" eval="0"/>
+        <field name="amount">0.0</field>
+        <field name="type">percent</field>
+        <field name="type_tax_use">purchase</field>
+        <field name="ref_base_sign">-1</field>
+        <field name="ref_tax_sign">-1</field>
+        <field name="account_collected_id" ref="account_account_103012"/>
+        <field name="account_paid_id" ref="account_account_103012"/>
+        <field name="base_code_id" ref="my_base_code_gpb"/>
+        <field name="tax_code_id" ref="my_tax_code_gp"/>
+        <field name="ref_base_code_id" ref="my_base_code_gpb"/>
+        <field name="ref_tax_code_id" ref="my_tax_code_gp"/>
+        <field name="child_depend" eval="0"/>
+        <field name="chart_template_id" ref="my_chart_template"/>
+    </record>
+	
+	<record id="my_input_tax_ajp" model="account.tax.template">
+        <field name="name">AJP - Input Tax: Bad debt and Other Adjustment (6%)</field>
+        <field name="description">AJP</field>
+        <field name="price_include" eval="0"/>
+        <field name="amount">0.06</field>
+        <field name="type">percent</field>
+        <field name="type_tax_use">purchase</field>
+        <field name="ref_base_sign">-1</field>
+        <field name="ref_tax_sign">-1</field>
+        <field name="account_collected_id" ref="account_account_103013"/>
+        <field name="account_paid_id" ref="account_account_103013"/>
+        <field name="base_code_id" ref="my_base_code_ajpb"/>
+        <field name="tax_code_id" ref="my_tax_code_ajp"/>
+        <field name="ref_base_code_id" ref="my_base_code_ajpb"/>
+        <field name="ref_tax_code_id" ref="my_tax_code_ajp"/>
+        <field name="child_depend" eval="0"/>
+        <field name="chart_template_id" ref="my_chart_template"/>
+    </record>
+	
+	<record id="my_input_tax_rp" model="account.tax.template">
+        <field name="name">RP - Relief Purchase (0%)</field>
+        <field name="description">RP</field>
+        <field name="price_include" eval="0"/>
+        <field name="amount">0.0</field>
+        <field name="type">percent</field>
+        <field name="type_tax_use">purchase</field>
+        <field name="ref_base_sign">-1</field>
+        <field name="ref_tax_sign">-1</field>
+        <field name="account_collected_id" ref="account_account_103014"/>
+        <field name="account_paid_id" ref="account_account_103014"/>
+        <field name="base_code_id" ref="my_base_code_rpb"/>
+        <field name="tax_code_id" ref="my_tax_code_rp"/>
+        <field name="ref_base_code_id" ref="my_base_code_rpb"/>
+        <field name="ref_tax_code_id" ref="my_tax_code_rp"/>
+        <field name="child_depend" eval="0"/>
+        <field name="chart_template_id" ref="my_chart_template"/>
+    </record>
+	
+	<record id="my_input_tax_tx" model="account.tax.template">
+        <field name="name">TX - Standard Rated Purchases (6%)</field>
+        <field name="description">TX</field>
+        <field name="price_include" eval="0"/>
+        <field name="amount">0.06</field>
+        <field name="type">percent</field>
+        <field name="type_tax_use">purchase</field>
+        <field name="ref_base_sign">-1</field>
+        <field name="ref_tax_sign">-1</field>
+        <field name="account_collected_id" ref="account_account_103001"/>
+        <field name="account_paid_id" ref="account_account_103001"/>
+        <field name="base_code_id" ref="my_base_code_txb"/>
+        <field name="tax_code_id" ref="my_tax_code_tx"/>
+        <field name="ref_base_code_id" ref="my_base_code_txb"/>
+        <field name="ref_tax_code_id" ref="my_tax_code_tx"/>
+        <field name="child_depend" eval="0"/>
+        <field name="chart_template_id" ref="my_chart_template"/>
+    </record>
+	
+    </data>
+</openerp>

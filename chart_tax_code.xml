@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<openerp>
+    <data noupdate="1">
+
+     <record model="account.tax.code.template" id="my_tax_code_tax_root">
+         <field name="name">Malaysia Chart of Account</field>
+     </record>
+
+     <record model="account.tax.code.template" id="my_tax_code_tax_bases">
+         <field name="name">Tax Bases</field>
+         <field name="parent_id" ref="my_tax_code_tax_root"/>
+     </record>
+
+     <record model="account.tax.code.template" id="my_tax_code_tax_balance_pay">
+         <field name="name">GST Amount Payable/Claimable</field>
+         <field name="code">Field 7/8</field>
+         <field name="parent_id" ref="my_tax_code_tax_root"/>
+     </record>
+
+    <!-- Base Codes (Purchase/Input) -->	 
+	 
+	 <record model="account.tax.code.template" id="my_base_code_input_tax">
+         <field name="name">Base of Input Tax</field>
+         <field name="code">6a</field>
+         <field name="parent_id" ref="my_tax_code_tax_bases"/>
+     </record>
+
+     <record model="account.tax.code.template" id="my_base_code_ajpb">
+         <field name="name">AJP[B] - Input Tax: Bad debt and Other Adjustment Base (6%)</field>
+         <field name="code">AJP[B]</field>
+         <field name="parent_id" ref="my_base_code_input_tax"/>
+     </record>
+
+     <record model="account.tax.code.template" id="my_base_code_blb">
+         <field name="name">BL[B] - Blocked Input Tax Base (6%)</field>
+		 <field name="code">BL[B]</field>
+         <field name="parent_id" ref="my_base_code_input_tax"/>
+     </record>
+
+     <record model="account.tax.code.template" id="my_base_code_epb">
+         <field name="name">EP[B] - Exempt Purchases Base (0%)</field>
+         <field name="code">EP[B]</field>
+         <field name="parent_id" ref="my_base_code_input_tax"/>
+     </record>
+	
+     <record model="account.tax.code.template" id="my_base_code_gpb">
+         <field name="name">GP[B] - Group Registration Purchase (0%)</field>
+         <field name="code">GP[B]</field>
+         <field name="parent_id" ref="my_base_code_input_tax"/>
+     </record>
+
+     <record model="account.tax.code.template" id="my_base_code_imb">
+         <field name="name">IM[B] - Imported Goods Base (6%)</field>
+		 <field name="code">IM[B]</field>
+         <field name="parent_id" ref="my_base_code_input_tax"/>
+     </record>	
+	 
+	 <record model="account.tax.code.template" id="my_base_code_imgdsb">
+         <field name="name">IMGDS[B]-Overseas Imported Goods Base (0%)</field>
+		 <field name="code">IMGDS[B]</field>
+         <field name="parent_id" ref="my_base_code_input_tax"/>
+     </record>	
+
+     <record model="account.tax.code.template" id="my_base_code_isb">
+         <field name="name">IS[B] - Special GST Scheme imported goods Base (0%)</field>
+         <field name="code">IS[B]</field>
+         <field name="parent_id" ref="my_base_code_input_tax"/>
+     </record>
+
+     <record model="account.tax.code.template" id="my_base_code_nrb">
+         <field name="name">NR[B] -Non-GST Registered Supplier Purchases Base (0%)</field>
+         <field name="code">NR[B]</field>
+         <field name="parent_id" ref="my_base_code_input_tax"/>
+     </record>
+
+     <record model="account.tax.code.template" id="my_base_code_opb">
+         <field name="name">OP[B] - Out of Scope Purchases Base (0%)</field>
+         <field name="code">OP[B]</field>
+         <field name="parent_id" ref="my_base_code_input_tax"/>
+     </record>
+
+     <record model="account.tax.code.template" id="my_base_code_rpb">
+         <field name="name">RP[B] - Zero Rated Purchases Base (0%)</field>
+         <field name="code">RP[B]</field>
+         <field name="parent_id" ref="my_base_code_input_tax"/>
+     </record>
+
+     <record model="account.tax.code.template" id="my_base_code_txb">
+         <field name="name">TX[B] - Standard Rated Purchases Base (6%)</field>
+         <field name="code">TX[B]</field>
+         <field name="parent_id" ref="my_base_code_input_tax"/>
+     </record>
+
+     <record model="account.tax.code.template" id="my_base_code_tx-e43b">
+         <field name="name">TX-E43[B] - Expenditure directly for Incidental Exempt Supplies Base (6%)</field>
+         <field name="code">TX-E43[B]</field>
+         <field name="parent_id" ref="my_base_code_input_tax"/>
+     </record>
+	 
+	 <record model="account.tax.code.template" id="my_base_code_tx-n43b">
+         <field name="name">TX-N43[B] - Expenditure directly for Exempt Supplies Base (6%)</field>
+         <field name="code">TX-N43[B]</field>
+         <field name="parent_id" ref="my_base_code_input_tax"/>
+     </record>
+	 
+	 <record model="account.tax.code.template" id="my_base_code_tx-reb">
+         <field name="name">TX-RE[B] - Residual input tax expenditure Base (6%)</field>
+         <field name="code">TX-RE[B]</field>
+         <field name="parent_id" ref="my_base_code_input_tax"/>
+     </record>
+
+	 <record model="account.tax.code.template" id="my_base_code_zpb">
+         <field name="name">ZP[B] - Zero Rated Purchases Base (0%)</field>
+         <field name="code">ZP[B]</field>
+         <field name="parent_id" ref="my_base_code_input_tax"/>
+     </record>
+	 
+	 <!-- Base code (Sales/Output) -->
+	 
+     <record model="account.tax.code.template" id="my_base_code_output_tax">
+         <field name="name">Base of Output Tax</field>
+         <field name="code">5a</field>
+         <field name="parent_id" ref="my_tax_code_tax_bases"/>
+     </record>
+	 
+	 <record model="account.tax.code.template" id="my_base_code_ajsb">
+         <field name="name">AJS[B] - Output Tax: Bad debt and Other Adjustment Base (6%)</field>
+         <field name="code">AJS[B]</field>
+         <field name="parent_id" ref="my_base_code_output_tax"/>
+     </record>
+
+     <record model="account.tax.code.template" id="my_base_code_dsb">
+         <field name="name">DS[B] - Deemed Supplies output tax Base (6%)</field>
+		 <field name="code">DS[B]</field>
+         <field name="parent_id" ref="my_base_code_output_tax"/>
+     </record>
+
+     <record model="account.tax.code.template" id="my_base_code_es43b">
+         <field name="name">ES43[B] - Incidental Exempt Supplies Base (0%)</field>
+         <field name="code">ES43[B]</field>
+         <field name="parent_id" ref="my_base_code_output_tax"/>
+     </record>
+
+     <record model="account.tax.code.template" id="my_base_code_esb">
+         <field name="name">ES[B] - Exempt Supplies Base (0%)</field>
+		 <field name="code">ES[B]</field>
+         <field name="parent_id" ref="my_base_code_output_tax"/>
+     </record>
+	 
+     <record model="account.tax.code.template" id="my_base_code_gsb">
+         <field name="name">GS[B] - Group Registration Supplies Base (0%)</field>
+		 <field name="code">GS[B]</field>
+         <field name="parent_id" ref="my_base_code_output_tax"/>
+     </record>
+
+     <record model="account.tax.code.template" id="my_base_code_osb">
+         <field name="name">OS[B] - Out of Scope Supplies Base (0%)</field>
+		 <field name="code">OS[B]</field>
+         <field name="parent_id" ref="my_base_code_output_tax"/>
+     </record>
+
+     <record model="account.tax.code.template" id="my_base_code_rsb">
+         <field name="name">RS[B] - GST Order Relief Supplies Base (0%)</field>
+		 <field name="code">RS[B]</field>
+         <field name="parent_id" ref="my_base_code_output_tax"/>
+     </record>
+
+     <record model="account.tax.code.template" id="my_base_code_srb">
+         <field name="name">SR[B] - Standard Rated Supplies Base (6%)</field>
+		 <field name="code">SR[B]</field>
+         <field name="parent_id" ref="my_base_code_output_tax"/>
+     </record>
+
+     <record model="account.tax.code.template" id="my_base_code_zdab">
+         <field name="name">ZDA[B] - Taxable Sales Rated ZDA Base (0%)</field>
+		 <field name="code">ZDA[B]</field>
+         <field name="parent_id" ref="my_base_code_output_tax"/>
+     </record>
+
+     <record model="account.tax.code.template" id="my_base_code_zreb">
+         <field name="name">ZRE[B] - Export Zero Rated Supplies Base (0%)</field>
+		 <field name="code">ZRE[B]</field>
+         <field name="parent_id" ref="my_base_code_output_tax"/>
+     </record>
+
+     <record model="account.tax.code.template" id="my_base_code_zrlb">
+         <field name="name">ZRL[B] - Local Zero Rated Supplies Base (0%)</field>
+		 <field name="code">ZRL[B]</field>
+         <field name="parent_id" ref="my_base_code_output_tax"/>
+     </record>
+
+
+     <!-- Tax Codes -->
+
+     <record model="account.tax.code.template" id="my_tax_code_output_tax">
+         <field name="name">Output Tax</field>
+         <field name="code">5b</field>
+         <field name="parent_id" ref="my_tax_code_tax_balance_pay"/>
+     </record>
+
+     <record model="account.tax.code.template" id="my_tax_code_ajs">
+         <field name="name">AJS - Output Tax: Bad debt and Other Adjustment (6%)</field>
+		 <field name="code">AJS</field>
+         <field name="parent_id" ref="my_tax_code_output_tax"/>
+     </record>
+
+
+     <record model="account.tax.code.template" id="my_tax_code_ds">
+         <field name="name">DS - Deemed Supplies output tax (6%)</field>
+		 <field name="code">DS</field>
+         <field name="parent_id" ref="my_tax_code_output_tax"/>
+     </record>
+	 
+     <record model="account.tax.code.template" id="my_tax_code_es">
+         <field name="name">ES - Exempt Supplies (0%)</field>
+		 <field name="code">ES</field>
+         <field name="parent_id" ref="my_tax_code_output_tax"/>
+     </record>
+	 
+     <record model="account.tax.code.template" id="my_tax_code_es43">
+         <field name="name">ES43 - Incidental Exempt Supplies (0%)</field>
+		 <field name="code">ES43</field>
+         <field name="parent_id" ref="my_tax_code_output_tax"/>
+     </record>
+	 
+     <record model="account.tax.code.template" id="my_tax_code_gs">
+         <field name="name">GS - Group Registration Supplies (0%)</field>
+		 <field name="code">GS</field>
+         <field name="parent_id" ref="my_tax_code_output_tax"/>
+     </record>
+	 
+     <record model="account.tax.code.template" id="my_tax_code_os">
+         <field name="name">OS - Out of Scope Supplies (0%)</field>
+		 <field name="code">OS</field>
+         <field name="parent_id" ref="my_tax_code_output_tax"/>
+     </record>
+	 
+     <record model="account.tax.code.template" id="my_tax_code_rs">
+         <field name="name">RS - GST Order Relief Supplies (0%)</field>
+		 <field name="code">RS</field>
+         <field name="parent_id" ref="my_tax_code_output_tax"/>
+     </record>
+ 
+     <record model="account.tax.code.template" id="my_tax_code_sr">
+         <field name="name">SR - Standard Rated Supplies (6%)</field>
+		 <field name="code">SR</field>
+         <field name="parent_id" ref="my_tax_code_output_tax"/>
+     </record>
+	 
+     <record model="account.tax.code.template" id="my_tax_code_zda">
+         <field name="name">ZDA - Tax Received Rated ZDA (0%)</field>
+		 <field name="code">ZDA</field>
+         <field name="parent_id" ref="my_tax_code_output_tax"/>
+     </record>
+	 
+     <record model="account.tax.code.template" id="my_tax_code_zre">
+         <field name="name">ZRE - Export Zero Rated Supplies (0%)</field>
+		 <field name="code">ZRE</field>
+         <field name="parent_id" ref="my_tax_code_output_tax"/>
+     </record>
+	 
+     <record model="account.tax.code.template" id="my_tax_code_zrl">
+         <field name="name">ZRL - Local Zero Rated Supplies (0%)</field>
+		 <field name="code">ZRL</field>
+         <field name="parent_id" ref="my_tax_code_output_tax"/>
+     </record>
+
+	 
+     <record model="account.tax.code.template" id="my_tax_code_input_tax">
+         <field name="name">Input Tax</field>
+         <field name="code">[6b]</field>
+         <field name="parent_id" ref="my_tax_code_tax_balance_pay"/>
+     </record>
+	 
+     <record model="account.tax.code.template" id="my_tax_code_ajp">
+         <field name="name">AJP - Input Tax: Bad debt and Other Adjustment (6%)</field>
+		 <field name="code">AJP</field>
+         <field name="parent_id" ref="my_tax_code_input_tax"/>
+     </record>
+	 
+     <record model="account.tax.code.template" id="my_tax_code_bl">
+         <field name="name">BL - Blocked Input Tax (6%)</field>
+		 <field name="code">BL</field>
+         <field name="parent_id" ref="my_tax_code_input_tax"/>
+     </record>
+	 
+     <record model="account.tax.code.template" id="my_tax_code_ep">
+         <field name="name">EP - Exempt Purchases (0%)</field>
+		 <field name="code">EP</field>
+         <field name="parent_id" ref="my_tax_code_input_tax"/>
+     </record>
+	 
+     <record model="account.tax.code.template" id="my_tax_code_gp">
+         <field name="name">GP - Group Registration Purchases (0%)</field>
+		 <field name="code">GP</field>
+         <field name="parent_id" ref="my_tax_code_input_tax"/>
+     </record>
+
+	<record model="account.tax.code.template" id="my_tax_code_im">
+         <field name="name">IM - Imported Goods (6%)</field>
+		 <field name="code">IM</field>
+         <field name="parent_id" ref="my_tax_code_input_tax"/>
+     </record>
+	 
+	 <record model="account.tax.code.template" id="my_tax_code_imgds">
+         <field name="name">IM-GDS-Overseas Imported Goods (0%)</field>
+		 <field name="code">IMGDS</field>
+         <field name="parent_id" ref="my_tax_code_input_tax"/>
+     </record>
+	 
+	 <record model="account.tax.code.template" id="my_tax_code_is">
+         <field name="name">IS - Special GST Scheme imported goods (0%)</field>
+		 <field name="code">IS</field>
+         <field name="parent_id" ref="my_tax_code_input_tax"/>
+     </record>
+	 
+	 <record model="account.tax.code.template" id="my_tax_code_nr">
+         <field name="name">NR -Non-GST Registered Supplier Purchases (0%)</field>
+		 <field name="code">NR</field>
+         <field name="parent_id" ref="my_tax_code_input_tax"/>
+     </record>
+	 
+	 <record model="account.tax.code.template" id="my_tax_code_op">
+         <field name="name">OP - Out of Scope Purchases (0%)</field>
+		 <field name="code">OP</field>
+         <field name="parent_id" ref="my_tax_code_input_tax"/>
+     </record>
+	 
+	 <record model="account.tax.code.template" id="my_tax_code_rp">
+         <field name="name">RP - Relief Purchase (0%)</field>
+		 <field name="code">RP</field>
+         <field name="parent_id" ref="my_tax_code_input_tax"/>
+     </record>
+	 
+	 <record model="account.tax.code.template" id="my_tax_code_tx">
+         <field name="name">TX - Standard Rated Purchases (6%)</field>
+		 <field name="code">TX</field>
+         <field name="parent_id" ref="my_tax_code_input_tax"/>
+     </record>
+	 
+	 <record model="account.tax.code.template" id="my_tax_code_tx-e43">
+         <field name="name">TX-E43 - Expenditure directly for Incidental Exempt Supplies (6%)</field>
+		 <field name="code">TX-E43</field>
+         <field name="parent_id" ref="my_tax_code_input_tax"/>
+     </record>
+	 
+	 <record model="account.tax.code.template" id="my_tax_code_tx-n43">
+         <field name="name">TX-N43 - Expenditure directly for Exempt Supplies (6%)</field>
+		 <field name="code">TX-N43</field>
+         <field name="parent_id" ref="my_tax_code_input_tax"/>
+     </record>
+	 
+	 <record model="account.tax.code.template" id="my_tax_code_tx-re">
+         <field name="name">TX-RE - Residual input tax expenditure (6%)</field>
+		 <field name="code">TX-RE</field>
+         <field name="parent_id" ref="my_tax_code_input_tax"/>
+     </record>
+	 
+	 <record model="account.tax.code.template" id="my_tax_code_zp">
+         <field name="name">ZP - Zero Rated Purchases (0%)</field>
+		 <field name="code">ZP</field>
+         <field name="parent_id" ref="my_tax_code_input_tax"/>
+     </record>
+
+    </data>
+</openerp>
